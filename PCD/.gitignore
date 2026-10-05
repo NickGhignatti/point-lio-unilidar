@@ -1,0 +1,3 @@
+# Point-LIO writes scans.pcd here when pcd_save_en is true; keep the folder, ignore its output.
+*
+!.gitignore
