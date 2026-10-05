@@ -1,5 +1,26 @@
 # point_lio_unilidar
 
+## About this copy
+
+This repository is a copy of `src/slam/point_lio_unilidar` from
+[jizhang-cmu/autonomy_stack_go2](https://github.com/jizhang-cmu/autonomy_stack_go2)
+at commit `43d5f54`, kept as a standalone package so that a ROS2 Foxy workspace
+can pull it in with `vcs import`. That package is CMU's ROS2 port of
+[unitreerobotics/point_lio_unilidar](https://github.com/unitreerobotics/point_lio_unilidar)
+(ROS1), which adapts [hku-mars/Point-LIO](https://github.com/hku-mars/Point-LIO)
+to the Unitree L1 lidar. The algorithm is unchanged. Everything below this
+section is the original README and still describes the ROS1 build.
+
+Changes from the source:
+
+- 2026-10-05: removed `message_generation`, `message_runtime` and
+  `transform_sensors` from `package.xml`; rosdep has no rule for them on Foxy.
+- 2026-10-05: added the `PCD/` folder that `pcd_save_en: true` writes
+  `scans.pcd` into.
+
+Licence: see `LICENSE` (GNU GPL v2), kept as received. `package.xml` declares
+BSD; that field is also kept as received.
+
 ## Introduction
 
 This repository adapts the state-of-the-art lidar inertial odometry algorithm, `Point-LIO`, for use with our lidar, `Unitree Lidar L1`.
