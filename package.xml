@@ -27,12 +27,10 @@
   <depend>tf2</depend>
   <depend>pcl_ros</depend>
 
+  <!-- 2026-10-05, Nick Ghignatti: removed message_generation and
+       message_runtime (ROS1 only) and transform_sensors (CMU package not
+       included here); rosdep has no rule for any of them on Foxy. -->
   <build_depend>sensor_msgs</build_depend>
-  <build_depend>message_generation</build_depend>
-
-  <build_export_depend>message_runtime</build_export_depend>
-  <exec_depend>message_runtime</exec_depend>
-  <exec_depend>transform_sensors</exec_depend>
 
   <!-- <test_depend>rostest</test_depend>
   <test_depend>rosbag</test_depend> -->
