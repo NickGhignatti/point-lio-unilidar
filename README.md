@@ -17,6 +17,9 @@ Changes from the source:
   `transform_sensors` from `package.xml`; rosdep has no rule for them on Foxy.
 - 2026-10-05: added the `PCD/` folder that `pcd_save_en: true` writes
   `scans.pcd` into.
+- 2026-10-15: `launch/mapping_utlidar.launch` no longer starts CMU's
+  `transform_everything` node, which is not part of this copy. Run your own
+  node that publishes `/utlidar/transformed_cloud` and `/utlidar/transformed_imu`.
 
 Licence: see `LICENSE` (GNU GPL v2), kept as received. `package.xml` declares
 BSD; that field is also kept as received.
